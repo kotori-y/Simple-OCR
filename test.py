@@ -65,11 +65,5 @@ def main():
 
 
 if __name__ == "__main__":
-    import tarfile
-
-    tar = tarfile.open("data.tar.gz")
-    tar.extractall()
-    tar.close()
-
-    # res, acc = main()
-    # print(f"{res} \n Accuracy: {acc}")
+    res, acc = main()
+    print(f"{res} \n Accuracy: {acc}")
