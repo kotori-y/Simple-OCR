@@ -38,7 +38,7 @@ def add_arguments(parser):
 
 def test(args):
     model = VerificationCodeCNN()
-    print(args.gpu)
+    print(f"use {'gpu' if args.gpu else 'cpu'}")
     model.load_state_dict(torch.load(args.weights, map_location='gpu' if args.gpu else "cpu"))
 
     dl_test = build_dataloader(args.input, batch_size=1024, shuffle=False)

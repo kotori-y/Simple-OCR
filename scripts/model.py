@@ -96,7 +96,7 @@ def calculate_acc(output, target, mode=None):
     output, target = output.view(-1, 4), target.view(-1, 4)
     correct_list = []
     p, t = [], []
-    for i, j in zip(target, output):
+    for i, j in zip(output, target):
         res = 1 if torch.equal(i, j) else 0
         correct_list.append(res)
         if mode == "predicting":
